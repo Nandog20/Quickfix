@@ -6,7 +6,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-md fixed w-full z-10">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="w-full mx-auto px-6 py-4 flex justify-between items-center">
        
         <NavLink to="/" className="text-2xl font-bold text-primary">
           QuickFix
@@ -15,13 +15,13 @@ export default function Navbar() {
         {/* Menu web*/}
         <ul className="hidden md:flex space-x-6 text-lg">
           <li>
-            <NavLink to="/products" className="hover:text-primary transition">Productos</NavLink>
+            <NavLink to="/products" className="hover:text-primary transition hover:text-blue-500">Productos</NavLink>
           </li>
           <li>
-            <NavLink to="/register" className="hover:text-primary transition">Registrarse</NavLink>
+            <NavLink to="/register" className="hover:text-primary transition hover:text-blue-500">Registrarse</NavLink>
           </li>
           <li>
-            <NavLink to="/login" className="hover:text-primary transition">Iniciar sesión</NavLink>
+            <NavLink to="/login" className="hover:text-primary transition hover:text-blue-500">Iniciar sesión</NavLink>
           </li>
         </ul>
 
@@ -42,13 +42,13 @@ export default function Navbar() {
       {menuOpen && (
         <ul className="md:hidden bg-white shadow-md absolute w-full left-0 px-6 py-4 space-y-4">
           <li>
-            <a href="#" className="block text-lg hover:text-primary transition">Productos</a>
+            <NavLink to="/products" className="block text-lg hover:text-primary transition hover:text-blue-500">Productos</NavLink>
           </li>
           <li>
-            <a href="#" className="block text-lg hover:text-primary transition">Registrarse</a>
+            <NavLink to="/register" className="block text-lg hover:text-primary transition hover:text-blue-500">Registrarse</NavLink>
           </li>
           <li>
-            <a href="#" className="block text-lg hover:text-primary transition">Iniciar sesión</a>
+            <NavLink to="/login" className="block text-lg hover:text-primary transition hover:text-blue-500">Iniciar sesión</NavLink>
           </li>
         </ul>
       )}

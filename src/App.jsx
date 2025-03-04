@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Products from './pages/Products';
 import Navbar from './components/Navbar';
 import Hero from './pages/Hero';
+import NewProduct from './pages/NewProduct';
 
 function App(){
     return(
@@ -16,8 +17,9 @@ function App(){
       <Routes>
         <Route path="/" element={<Hero />}/>
         <Route path='/register' element={<Register/>} />
-        <Route path='/Login' element={<Login/>}/>
-        <Route path='/Products' element={<Products/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/products' element={<Products/>}/>
+        <Route path='/newProduct' element={<NewProduct/>}/>
       </Routes>
     </BrowserRouter>
     )

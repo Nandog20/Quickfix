@@ -7,6 +7,7 @@ import Products from './pages/Products';
 import Navbar from './components/Navbar';
 import Hero from './pages/Hero';
 import NewProduct from './pages/NewProduct';
+import Citas from './pages/Citas';
 
 function App(){
     return(
@@ -20,6 +21,7 @@ function App(){
         <Route path='/login' element={<Login/>}/>
         <Route path='/products' element={<Products/>}/>
         <Route path='/newProduct' element={<NewProduct/>}/>
+        <Route path='/Cita' element={<Citas/>}/>
       </Routes>
     </BrowserRouter>
     )

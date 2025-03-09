@@ -11,7 +11,7 @@ function Hero(){
                 </div>
             </div>
 
-            <div className="max-w-3xl mx-auto px-6 py-10 space-y-6">
+            <div className="max-w-7xl mx-auto px-6 py-10 space-y-6">
                 <h3 className="text-5xl font-bold text-primary border-b-4 pb-2">¿Quiénes somos?</h3>
                 <p className="text-xl text-gray-700 leading-relaxed">
                 QuickFix es un taller mecánico que busca ser uno de los mejores talleres mecánicos de la capital. Estamos ubicados en Avenida San Jerónimo 914, 10200 La Magdalena Contreras, Distrito Federal.
@@ -32,7 +32,7 @@ function Hero(){
                 <p className="text-xl text-gray-700 leading-relaxed">
                 Implementar un sistema eficiente de gestión para optimizar la administración de clientes, vehículos y servicios ofreciendo un proceso transparente y confiable que eleve la calidad del taller y la fidelidad del cliente.
                 </p>
-</div>
+            </div>
 
         </>
     )

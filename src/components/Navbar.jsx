@@ -23,6 +23,13 @@ export default function Navbar() {
           <li>
             <NavLink to="/login" className="hover:text-primary transition hover:text-blue-500">Iniciar sesión</NavLink>
           </li>
+          {/*solo para testing*/}
+          <li>
+            <NavLink to="/newProduct" className="hover:text-primary transition hover:text-blue-500">Agregar productos</NavLink>
+          </li>
+          <li>
+            <NavLink to="/Cita" className="hover:text-primary transition hover:text-blue-500">Cita</NavLink>
+          </li>
         </ul>
 
         {/* Botón del menú en móviles */}

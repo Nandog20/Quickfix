@@ -1,5 +1,7 @@
 import Axios from "axios";
 import { useState } from "react";
+import CustomInput from "../components/CustomInput";
+
 function NewProduct(){
     const [producto, setProducto]= useState("");
     const [stock, setStock]= useState();
@@ -22,20 +24,15 @@ function NewProduct(){
             <div className='w-full max-w-lg flex flex-col shadow-md p-6 rounded-2xl bg-white'>
                 <h2 className='text-3xl font-bold text-center text-gray-700 m-3'>Ingresa un nuevo producto</h2>
 
-                <label htmlFor="nombre" className='font-semibold text-lg my-2 text-gray-700'>Nombre de producto:</label>
-                <input type="text" name="nombre" placeholder="Producto 1" onChange={(e)=>setProducto(e.target.value)} className='border-slate-200 p-2 rounded-lg bg-slate-100 w-full'/>
+                <CustomInput nameValue='nombre' label="Nombre del producto: " type='text' value={setProducto} placeholder="producto"/>
 
-                <label htmlFor="stock" className='font-semibold text-lg my-2 text-gray-700'>Número de stock:</label>
-                <input type="number" name="stock" placeholder="50" onChange={(e)=>setStock(e.target.value)} className='border-slate-200 p-2 rounded-lg bg-slate-100 w-full'/>
+                <CustomInput nameValue='stock' label="Numero de stock: " type='text' value={setStock} placeholder="4"/>
 
-                <label htmlFor="precio" className='font-semibold text-lg my-2 text-gray-700'>Precio producto:</label>
-                <input type="number" name="precio" placeholder="25.50" onChange={(e)=>setPrecio(e.target.value)} className='border-slate-200 p-2 rounded-lg bg-slate-100 w-full'/>
+                <CustomInput nameValue='precio' label="Precio unitario: " type='number' value={setPrecio} placeholder="25.90"/>
 
-                <label htmlFor="imagen" className='font-semibold text-lg my-2 text-gray-700'>URL imagen:</label>
-                <input type="text" name="imagen" placeholder="imagen.jpg" onChange={(e)=>setImage(e.target.value)} className='border-slate-200 p-2 rounded-lg bg-slate-100 w-full'/>
-
-                <label htmlFor="descripción" className='font-semibold text-lg my-2 text-gray-700'>Descripción del producto:</label>
-                <input type="text" name="descripción" placeholder="Ingrese la descripción del producto" onChange={(e)=>setDesc(e.target.value)} className='border-slate-200 p-2 rounded-lg bg-slate-100 w-full'/>
+                <CustomInput nameValue='imagen' label="URL de la imagen: " type='text' value={setImage} placeholder="imagen.jpg"/>
+                
+                <CustomInput nameValue='descripción' label="Descripción del producto: " type='text' value={setDesc} placeholder="Producto para tal cosa"/>
 
                 <button onClick={Add} className=' my-4 border bg-cyan-500 text-white w-full rounded-lg py-2 shadow-lg hover:bg-cyan-600 transition cursor-pointer' >Añadir producto</button>
             </div>

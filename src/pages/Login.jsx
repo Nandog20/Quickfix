@@ -1,14 +1,26 @@
 import { useState } from "react";
 import Axios from "axios";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import CustomInput from "../components/CustomInput";
 
 function Login(){
     const [user,setUser] = useState("")
     const [password,setPassword] = useState("")
+    const navigate = useNavigate();
 
     const log =()=>{
-        alert("hola " + user + " " + password)
+        Axios.post("http://localhost:3001/login",{
+            correo: user,
+            password: password
+        }).then(res=>{
+            console.log(res.data)
+            sessionStorage.setItem("id",res.data[0].id);
+            sessionStorage.setItem("user",res.data[0].nombre);
+            navigate("/products")
+        }).catch(err=>{
+            alert("Usuario o contraseña incorrectos")
+            console.error(err)
+        })
     }
 
     return(

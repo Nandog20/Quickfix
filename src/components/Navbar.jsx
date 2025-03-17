@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const id = sessionStorage.getItem("id");
   return (
     <nav className="bg-white shadow-md fixed w-full z-10">
       <div className="w-full mx-auto px-6 py-4 flex justify-between items-center">
@@ -23,13 +23,10 @@ export default function Navbar() {
           <li>
             <NavLink to="/login" className="hover:text-primary transition hover:text-blue-500">Iniciar sesión</NavLink>
           </li>
-          {/*solo para testing*/}
           <li>
-            <NavLink to="/newProduct" className="hover:text-primary transition hover:text-blue-500">Agregar productos</NavLink>
+            {id}
           </li>
-          <li>
-            <NavLink to="/Cita" className="hover:text-primary transition hover:text-blue-500">Cita</NavLink>
-          </li>
+          
         </ul>
 
         {/* Botón del menú en móviles */}

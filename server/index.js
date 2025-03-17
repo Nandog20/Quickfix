@@ -70,6 +70,31 @@ const db = mysql.createConnection({
         })
     })
 
+//Obtener todos los usuarios
+    app.get("/users",(req,res)=>{
+        db.query('SELECT * FROM users',(err, result)=>{
+            if(err){
+                console.log(err);
+            }
+            else{
+                res.json(result);
+            }
+        })
+    })
+//Login de usuario
+app.post("/login",(req,res)=>{
+    const correo = req.body.correo;
+    const password = req.body.password;
+    db.query('SELECT * FROM users WHERE correo = ? AND pass = ?', [correo, password],(err, result)=>{
+        if(result.length > 0){
+            res.json(result)
+        }
+        else{
+            res.json("Usuario no encontrado")
+        }
+    })
+})
+
 //listener
 app.listen(3001,()=>{
     console.log("Funcionando en el puerto 3001")
